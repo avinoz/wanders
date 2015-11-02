@@ -1,4 +1,4 @@
-x
+
 class User < ActiveRecord::Base
   include BCrypt
 
