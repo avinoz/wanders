@@ -1,6 +1,5 @@
 Dotenv.load
 
-
 class Message
     @account_sid  = ENV['ACCOUNT_SID']
     @auth_token  = ENV['AUTH_TOKEN']
