@@ -1,0 +1,18 @@
+
+<div id="header">
+  <img src="../../wanders_logo.jpg" alt="not found" id="logo">
+
+  <form method="POST" action"/geolocation">
+    <input id="address_input" type="text" name="address" placeholder="Where do you want to explore?">
+  </form>
+
+  <div id="login_form">
+    <%= erb :login%>
+  </div>
+
+  <div id="logout_form">
+    <form name="logout" method="POST" action='/logout'>
+      <button>Logout</button>
+    </form>
+  </div>
+</div>

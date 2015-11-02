@@ -1,0 +1,160 @@
+
+/*ERROR MESSAGE BUTTON*/
+
+#textsent, #invalid_num {
+  width: 350px;
+  height: 100px;
+  padding: 35px 30px 60px 30px;
+  border: 1px solid black;
+  background: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -225px;
+  vertical-align: middle;
+  -webkit-box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px black;
+  font-size: 16px;
+  line-height: 150%;
+  display: none;
+}
+
+#textsent a, #invalid_num a {
+  color: black;
+}
+
+#textsent a:hover, #invalid_num a:hover {
+  color: orange;
+}
+
+#textsent button:hover, #invalid_num button:hover{
+  color: orange;
+}
+
+/*ERROR MESSAGE BUTTON*/
+
+#error {
+  width: 350px;
+  height: 100px;
+  padding: 35px 30px 60px 30px;
+  border: 1px solid black;
+  background: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -225px;
+  vertical-align: middle;
+  -webkit-box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px black;
+  font-size: 16px;
+  line-height: 150%;
+  display:none;
+}
+
+#error a {
+  color: black;
+}
+
+#error a:hover {
+  color: orange;
+}
+
+#error button:hover{
+  color: orange;
+}
+
+
+/*LOGIN  FORM*/
+
+#login_form {
+  padding-top: 5px;
+  padding-bottom: 15px;
+  position: absolute;
+  right: 0px;
+  display: inline;
+}
+
+#login_form input {
+  width: 120px;
+  height: 20px;
+  background: #F2F2F2 ;
+  border: none;
+  padding-left: 8px;
+}
+
+#login_form button {
+  border: none;
+  color: white;
+  padding-right: 30px;
+  background-color: #E4E4E4;
+  margin-top: 13px;
+}
+
+#login_form button:hover {
+  background-color: orange;
+}
+
+#logout_form button:hover {
+  background-color: orange;
+}
+
+#logout_form {
+  padding-top: 5px;
+  padding-bottom: 15px;
+  position: absolute;
+  right: 0px;
+  display: none;
+}
+
+#logout_form button {
+  border: none;
+  color: gray;
+  padding-right: 30px;
+  background-color: #E4E4E4;
+  margin-top: 13px;
+}
+
+/*OPENING PAGE*/
+
+/*#main_page_form {
+  text-align: center;
+  padding: 30%;
+}
+
+
+#main_page_form input {
+  width: 150px;
+  height: 20px;
+  background: #F2F2F2 ;
+  border: none;
+  padding-left: 8px;
+}
+*/
+
+#open_page {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+#open_page img {
+  width: 443px;
+  height: 109px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 80px;
+}

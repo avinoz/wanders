@@ -1,0 +1,121 @@
+html {
+  min-height: 100%;
+  min-width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+body {
+  margin:0;
+  padding:0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bold {
+  font-size: 45px;
+  font-weight: bold;
+  border: none;
+  background: none;
+  margin-bottom: 20px;
+}
+
+button {
+  cursor: pointer;
+}
+/*HEADER BAR ON TOP*/
+
+#header {
+  background-color: rgba(255, 255, 255, 0.75);
+  /*background-color: white;*/
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
+  /*height: 50px;*/
+  /*background-color: red;*/
+  /*-webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);*/
+  /*-moz-box-shadow:    0px 3px 5px 0px rgba(50, 50, 50, 0.75);*/
+}
+
+#logo {
+  vertical-align: middle;
+  margin-top: 10px;
+  margin-left: 25.25%;
+  margin-bottom: 10px;
+  height: 40px;
+  float: left;
+}
+
+#address_input {
+  position: absolute;
+  padding-top: 6px;
+  height: 48px;
+  width: 400px;
+  border: 0px;
+  margin: 0px 0px 0px 38px;
+  outline: none;
+  float: left;
+}
+
+/*MAPBOX API*/
+
+#map {
+  position:absolute;
+  top:60px;
+  bottom:0;
+  width:35%;
+  box-shadow: 8px 0px 5px -5px #333;
+}
+
+#text_marker {
+  position:absolute;
+  top:60px;
+  right:0;
+  width: 10%;
+  min-width: 150px;
+  bottom:0;
+  overflow-x:auto;
+  background: #323232;
+  padding: 40px 10px 10px 0px;
+  box-shadow: -5px 0 5px -5px black;
+}
+
+#marker-list {
+  width: 100%;
+  padding-top:40px;
+  margin-left: -40px;
+}
+
+#marker-list li {
+  color: gray;
+  padding:5px 5px 5px 25px;
+  margin:0;
+  list-style-type:none;
+  cursor: pointer;
+}
+
+#marker-list li:hover {
+  background:#eee;
+}
+
+
+/*IMAGE BOX*/
+
+.slides {
+  width: 100%;
+  display: inline;
+}
+
+#image_container {
+  position: absolute;
+  right: 10%;
+  top: 60px;
+  width: 55%;
+  height: 100vh;
+  background-color: black;
+  overflow: scroll;
+}

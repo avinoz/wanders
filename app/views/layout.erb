@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/application.css">
+  <link rel="stylesheet" href="/css/events.css">
+  <link rel="stylesheet" href="/css/api.css">
+
+  <!-- MAPBOX -->
+  <meta charset=utf-8 />
+  <title>WANDERS</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
+  <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
+
+  </head>
+
+
+  <body>
+    <div id="main_page">
+      <%= yield %>
+      <%= erb :popups %>
+    </div>
+    <div id="open_page">
+      <img name="go_to" src="../../wanders_logo.jpg">
+      <!-- <div id="main_page_form"><%= erb :login%></div> -->
+    </div>
+
+  </body>
+
+  <script type="text/javascript" src="/js/features.js" defer></script>
+  <script type="text/javascript" src="/js/application.js"></script>
+  <script type="text/javascript" src="/js/seaches.js" defer></script>
+</html>
