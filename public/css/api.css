@@ -54,6 +54,7 @@
   padding-right: 10px;
   color: white;
   background-color: gray;
+  /*transition:.2s;*/
 }
 
 #textmsg button:hover {
