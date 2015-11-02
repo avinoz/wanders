@@ -18,13 +18,8 @@ post '/logout' do
   session[:user_id] = nil
 end
 
-# TWILIO API
-
-# get '/textmsg'
-#   erb :textmsg
-# end
-
 post '/textmsg' do
+
   if Message.valid?(params[:phone_num])
     Message.send(params[:message])
     {:msg => "valid"}.to_json

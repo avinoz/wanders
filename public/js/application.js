@@ -10,6 +10,15 @@ $(document).ready(function() {
 
 // ###### LOGIN/OUT
 
+  $('div[id="login_form"]').hover(
+    function(){
+      $(this).find('input').fadeIn('fast');
+    },
+    function(){
+      $(this).find('input').fadeOut('slow');
+    }
+  );
+
   $("form[name='login']").on("submit", function(e){
     e.preventDefault()
     var usr_input= $(this).serialize();
@@ -46,7 +55,6 @@ $(document).ready(function() {
 
   $('form[name="textmsg"]').submit(function(e){
     e.preventDefault()
-
     var usr_input = $(this).serialize();
     $.ajax({
       url: "/textmsg",
