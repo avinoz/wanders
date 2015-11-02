@@ -22,7 +22,6 @@ gem 'geocoder'
 gem 'twilio-ruby'
 gem 'dotenv'
 
-group :test do
-  gem 'faker'
-  gem 'rspec'
-end
+gem 'faker'
+gem 'rspec'
+
