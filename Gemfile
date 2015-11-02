@@ -24,3 +24,4 @@ gem 'dotenv'
 
 gem 'faker'
 gem 'rspec'
+
