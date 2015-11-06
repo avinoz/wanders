@@ -26,27 +26,20 @@ map.featureLayer.on('ready', function(e) {
 
     // item.onClick = function(e) {
     $(item).click(function(e) {
-      // $("#image_container").animate({scrollTop: 0});
 
       e.preventDefault();
       var selected_title = title.replace(" ", "_")
       var curr_a = $('a[name='+selected_title+']').children('img')
-      var curr_pos = curr_a.position().top
+      var next_pos = curr_a.position().top
       // console.log(curr_a)
-      console.log(curr_pos)
-      console.log(selected_title)
+      // console.log(next_pos)
 
-      $("#image_container").animate({scrollTop: curr_pos});
-      // $("#image_container").delay( 2000 ).animate({scrollTop: 0});
-
-
-      // $("#image_container").animate($(this.hash).scrollTop().top, 500);
-      // $("#image_container").animate({scrollTop: (curr_a.hash).offset().top}, 1000);
-
+      var curr_location = $("#image_container").scrollTop()
+      console.log(curr_location)
+      $("#image_container").animate({scrollTop: next_pos+curr_location});
 
       map.setView(layer.getLatLng(), 16);
       layer.openPopup();
-      // console.log($(this)[0].innerHTML);
     });
   });
 });
