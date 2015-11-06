@@ -19,7 +19,6 @@ post '/logout' do
 end
 
 post '/textmsg' do
-
   if Message.valid?(params[:phone_num])
     Message.send(params[:message])
     {:msg => "valid"}.to_json
@@ -27,3 +26,4 @@ post '/textmsg' do
     {:msg => "invalid"}.to_json
   end
 end
+
