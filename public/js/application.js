@@ -10,11 +10,11 @@ $(document).ready(function() {
 
 // ###### LOGIN/OUT
 
-  $('div[id="login_form"]').hover(
-    function(){
-      $(this).find('input').fadeIn('fast');
+  $('div[id="login_form"]').hover(function(e){
+      // $(this).unbind(e);
+      $(this).find('input').fadeIn('fast').delay(3000)
     },
-    function(){
+    function(e){
       $(this).find('input').fadeOut('slow');
     }
   );
@@ -78,6 +78,9 @@ $(document).ready(function() {
     $('div[id="textsent"]').fadeOut('fast')
     $('#error').fadeOut('fast')
   })
+
+
+
   // $("button[class='bold']").click(function(){
   //   $('#error').fadeOut('fast')
   //   $('#textsent').fadeOut('fast')

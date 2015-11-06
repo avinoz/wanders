@@ -8,8 +8,14 @@ $(document).ready(function() {
   //  $("li:nth-child(4)").css("color", "red")
    // $("li:nth-child(4)").html("new Text")
 
-  $("ul").click(handler)
+//  $("ul").click(handler)
 
+  $('input[id="address_input"]').hover(function(){
+      $(this).attr('placeholder', 'ie. 633 Folsom St, San Francisco')
+    },
+    function(){
+      $(this).attr('placeholder', 'Where do you want to explore?')
+  });
 });
 
 function handler(event) {
@@ -23,4 +29,3 @@ function handler(event) {
   }
 }
 
-// var hash = {"Hello Kitty":"link to hello", "Thai food": "link to thai"}

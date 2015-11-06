@@ -1,3 +1,6 @@
+// require('dotenv').load();
+// L.mapbox.accessToken = process.env.MAPBOX_TOKEN
+
 
 L.mapbox.accessToken = 'pk.eyJ1IjoiYXZpbm96IiwiYSI6ImNpZnVvcmV1YzIzcWx1cGtxZ2Z5cWlrMTYifQ.VB-HMZg5gUGTydcXDGvgOw';
 // Create a map in the div #map
@@ -9,18 +12,42 @@ var map = L.mapbox.map('map', 'avinoz.o11688nh');
 // #################
 
 var markerList = document.getElementById('marker-list');
+var location_list = []; /// AVIO
 
 map.featureLayer.on('ready', function(e) {
   map.featureLayer.eachLayer(function(layer) {
     var item = markerList.appendChild(document.createElement('li'));
 
-    item.innerHTML = layer.toGeoJSON().properties.title;
-    console.log(item.innerHTML)
+    var title = layer.toGeoJSON().properties.title
+    var link = $('<a>').attr('href', "#" + title.replace(" ", "_"))[0];
+    link.innerHTML = title;
+    $(item).append(link);
+    location_list.push(item.innerHTML); // AVIO
 
-    item.onclick = function() {
+    // item.onClick = function(e) {
+    $(item).click(function(e) {
+      // $("#image_container").animate({scrollTop: 0});
+
+      e.preventDefault();
+      var selected_title = title.replace(" ", "_")
+      var curr_a = $('a[name='+selected_title+']').children('img')
+      var curr_pos = curr_a.position().top
+      // console.log(curr_a)
+      console.log(curr_pos)
+      console.log(selected_title)
+
+      $("#image_container").animate({scrollTop: curr_pos});
+      // $("#image_container").delay( 2000 ).animate({scrollTop: 0});
+
+
+      // $("#image_container").animate($(this.hash).scrollTop().top, 500);
+      // $("#image_container").animate({scrollTop: (curr_a.hash).offset().top}, 1000);
+
+
       map.setView(layer.getLatLng(), 16);
       layer.openPopup();
-    };
+      // console.log($(this)[0].innerHTML);
+    });
   });
 });
 
