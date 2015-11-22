@@ -6,7 +6,6 @@ L.mapbox.accessToken = 'pk.eyJ1IjoiYXZpbm96IiwiYSI6ImNpZnVvcmV1YzIzcWx1cGtxZ2Z5c
 // Create a map in the div #map
 var map = L.mapbox.map('map', 'avinoz.o81o3b0g');
 
-
 // #################
 // ## MARKER LIST ##
 // #################
